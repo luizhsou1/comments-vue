@@ -3,14 +3,14 @@
 </template>
 
 <script>
-import Comments from "./components/Comments";
+import Comments from './components/Comments'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    Comments,
-  },
-};
+    Comments
+  }
+}
 </script>
 
 <style>

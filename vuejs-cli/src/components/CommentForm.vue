@@ -25,26 +25,26 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
-      name: "",
-      message: "",
-    };
+      name: '',
+      message: ''
+    }
   },
   methods: {
-    addComment() {
+    addComment () {
       if (!this.message.trim()) {
-        return;
+        return
       }
 
-      this.$emit("add-comment", {
+      this.$emit('add-comment', {
         name: this.name,
-        message: this.message,
-      });
+        message: this.message
+      })
 
-      this.name = "";
-      this.message = "";
-    },
-  },
-};
+      this.name = ''
+      this.message = ''
+    }
+  }
+}
 </script>

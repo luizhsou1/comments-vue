@@ -27,38 +27,38 @@
 </template>
 
 <script>
-import CommentForm from "./CommentForm.vue";
+import CommentForm from './CommentForm.vue'
 
 export default {
   components: {
-    CommentForm,
+    CommentForm
   },
-  data() {
+  data () {
     return {
-      comments: [],
-    };
+      comments: []
+    }
   },
   methods: {
-    addComment(comment) {
-      this.comments.push(comment);
+    addComment (comment) {
+      this.comments.push(comment)
     },
-    removeComment(index) {
-      this.comments.splice(index, 1);
-    },
+    removeComment (index) {
+      this.comments.splice(index, 1)
+    }
   },
   computed: {
-    allComments() {
+    allComments () {
       return this.comments.map((comment) => ({
         ...comment,
-        name: comment.name.trim() === "" ? "Anônimo" : comment.name,
-      }));
-    },
+        name: comment.name.trim() === '' ? 'Anônimo' : comment.name
+      }))
+    }
   },
   watch: {
     // Monitora a propriedade comments, qualquer mudança no array de comments, ele chama essa função
-    comments(val) {
-      console.log(val);
-    },
-  },
-};
+    comments (val) {
+      console.log(val)
+    }
+  }
+}
 </script>
